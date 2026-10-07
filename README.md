@@ -21,7 +21,7 @@ The deck is organized into three main sections, navigable via the on-screen agen
    - The agentic flywheel and quality automation workflows
    - Spec-driven development
    - Model selection and the biggest levers for effective results
-   - Prompting techniques (precision, stop signals, providing context up front)
+   - Prompting techniques (precision, imperative goals, providing known context)
    - The Research → Plan → Implement workflow
    - Power-user guidance (thinking in code, CLIs vs. MCPs, shell output tips, and more)
 
