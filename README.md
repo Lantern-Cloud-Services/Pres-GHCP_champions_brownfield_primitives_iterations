@@ -25,6 +25,7 @@ The deck is organized into three main sections, navigable via the on-screen agen
    - Prompting techniques (precision, imperative goals, providing known context) and an example of prompt discipline
    - The Research → Plan → Implement workflow
    - Power-user guidance (thinking in code, CLIs vs. MCPs, shell output tips, and more)
+   - Session roadmap (Sessions 0-3: org setup, foundations, agentic primitives, workflows and orchestration)
 
 ## Viewing the presentation
 
