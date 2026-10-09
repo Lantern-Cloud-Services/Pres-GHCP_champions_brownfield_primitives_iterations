@@ -36,7 +36,7 @@ An additional reference deck on GitHub Copilot's included models (`assets/copilo
 ## Repository structure
 
 - `ghcp_champions_cli.html` — the main presentation deck
-- `ghcp_champions_internal.html` - a five-slide internal briefing cut of the deck (Agent Configs, Flywheel, Quality Automation Workflows with multi-agent orchestration, Fabric + Foundry + GitHub value proposition with GitHub as the agentic platform for software development, Session Roadmap)
+- `ghcp_champions_internal.html` - a six-slide internal briefing cut of the deck (Agent Configs, Flywheel, Quality Automation Workflows with multi-agent orchestration, Fabric + Foundry + GitHub value proposition with GitHub as the agentic platform for software development, Session Roadmap, "Powerpoint what now?" closer)
 - `index.html` — redirects to the main presentation deck (used as the GitHub Pages entry point)
 - `assets/` — supporting assets and the reference deck on Copilot models
 - `.github/workflows/deploy-pages.yml` — GitHub Actions workflow that publishes the presentation to GitHub Pages
