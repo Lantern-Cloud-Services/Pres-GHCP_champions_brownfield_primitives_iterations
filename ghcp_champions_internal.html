@@ -939,16 +939,16 @@
   .mao-arrow svg { width: 18px; height: 18px; }
   @media (max-width: 900px) { .mao-flow { flex-direction: column; gap: 8px; } .mao-arrow { display: none; } }
 
-  .slide.qaw-compact h1.headline { margin-bottom: 26px !important; }
+  .slide.qaw-compact h1.headline { margin-bottom: 18px !important; }
   .slide.qaw-compact .flow-steps { margin-bottom: 10px !important; }
   .slide.qaw-compact .flow-step { padding: 12px 14px 10px; }
   .slide.qaw-compact .flow-step h3 { font-size: .95rem; margin-bottom: 4px; }
   .slide.qaw-compact .flow-step p { font-size: .74rem; line-height: 1.4; }
-  .slide.qaw-compact .content-card { padding: 12px 20px; }
+  .slide.qaw-compact .content-card { padding: 10px 20px; }
   .slide.qaw-compact .content-card h3 { font-size: 1rem; margin-bottom: 6px; }
-  .slide.qaw-compact .content-card p { font-size: .8rem; margin-bottom: 6px; line-height: 1.45; }
-  .slide.qaw-compact .content-card li { font-size: .76rem; line-height: 1.4; margin-bottom: 2px; }
-  .slide.qaw-compact .mao { margin-top: 10px; padding: 12px 20px 14px; }
+  .slide.qaw-compact .content-card p { font-size: .8rem; margin-bottom: 4px; line-height: 1.4; }
+  .slide.qaw-compact .content-card li { font-size: .76rem; line-height: 1.35; margin-bottom: 1px; }
+  .slide.qaw-compact .mao { margin-top: 12px; padding: 12px 20px 14px; }
   .slide.qaw-compact .mao-head { margin-bottom: 8px; }
   .slide.qaw-compact .mao-head h3 { font-size: 1.05rem; margin-bottom: 4px; }
   .slide.qaw-compact .mao-head p { font-size: .78rem; }
@@ -956,6 +956,8 @@
   .slide.qaw-compact .mao-num { top: 10px; left: 10px; }
   .slide.qaw-compact .mao-step h4 { font-size: .84rem; margin-bottom: 2px; }
   .slide.qaw-compact .mao-step p { font-size: .72rem; line-height: 1.38; }
+  .slide.qaw-compact .qaw-standalone { margin-top: auto; margin-bottom: 12px; }
+  .slide.qaw-compact .mao { margin-bottom: 30px; }
 
   /* ── Sub-deck: Fabric + Foundry + GitHub ────────── */
   .vp-header { max-width: 1280px; width: 100%; margin: 0 auto 10px; }
@@ -1212,7 +1214,23 @@
       </div>
     </div>
 
-    <div class="two-col">
+    <div class="mao">
+      <div class="mao-head">
+        <div class="mao-eyebrow">Next step</div>
+        <h3>From automation workflows to <span>multi-agent orchestration</span></h3>
+        <p>Each workflow stage becomes a specialist agent, coordinated by an orchestrator and gated by deterministic checks.</p>
+      </div>
+      <div class="mao-flow">
+        <div class="mao-step"><div class="mao-num">1</div><h4>Orchestrator agent</h4><p>Breaks the spec into scoped tasks and routes each to a specialist</p></div>
+        <div class="mao-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
+        <div class="mao-step"><div class="mao-num">2</div><h4>Specialist subagents</h4><p>Design, Spec, Implement, and Validate agents run in parallel, each with its own context and model</p></div>
+        <div class="mao-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
+        <div class="mao-step"><div class="mao-num">3</div><h4>Structured handoffs</h4><p>Specs, plans, and test results are the contract between agents</p></div>
+        <div class="mao-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
+        <div class="mao-step"><div class="mao-num">4</div><h4>Gates &amp; human checkpoints</h4><p>Validation agents, CI, and CodeQL gate merges; humans approve key points</p></div>
+      </div>
+    </div>
+    <div class="two-col qaw-standalone">
       <div class="content-card">
         <h3 style="color:var(--cyan-soft);">Deterministic Guardrails</h3>
         <p>AI is probabilistic — your quality gates should be deterministic. Copilot works best when paired with:</p>
@@ -1232,23 +1250,6 @@
           <li>Track patterns of failure to improve prompt engineering</li>
           <li>Use /clear between fix attempts to avoid context pollution</li>
         </ul>
-      </div>
-    </div>
-
-    <div class="mao">
-      <div class="mao-head">
-        <div class="mao-eyebrow">Next step</div>
-        <h3>From automation workflows to <span>multi-agent orchestration</span></h3>
-        <p>Each workflow stage becomes a specialist agent, coordinated by an orchestrator and gated by deterministic checks.</p>
-      </div>
-      <div class="mao-flow">
-        <div class="mao-step"><div class="mao-num">1</div><h4>Orchestrator agent</h4><p>Breaks the spec into scoped tasks and routes each to a specialist</p></div>
-        <div class="mao-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
-        <div class="mao-step"><div class="mao-num">2</div><h4>Specialist subagents</h4><p>Design, Spec, Implement, and Validate agents run in parallel, each with its own context and model</p></div>
-        <div class="mao-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
-        <div class="mao-step"><div class="mao-num">3</div><h4>Structured handoffs</h4><p>Specs, plans, and test results are the contract between agents</p></div>
-        <div class="mao-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
-        <div class="mao-step"><div class="mao-num">4</div><h4>Gates &amp; human checkpoints</h4><p>Validation agents, CI, and CodeQL gate merges; humans approve key points</p></div>
       </div>
     </div>
   </div>
