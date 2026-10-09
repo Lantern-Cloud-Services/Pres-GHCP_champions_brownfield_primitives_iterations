@@ -1010,6 +1010,15 @@
   }
   .vp-outcome b { color: var(--teal); }
   @media (max-width: 1000px) { .vp-layout { grid-template-columns: 1fr; } }
+  .slide.wpp-slide { align-items: center; justify-content: center; }
+  .wpp-title {
+    margin: 0; text-align: center; font-size: clamp(4rem, 11vw, 10rem); font-weight: 900;
+    letter-spacing: -3px; line-height: 1; color: var(--text-0);
+  }
+  .wpp-title span {
+    background: linear-gradient(90deg, var(--green), var(--cyan), var(--purple));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
 </style>
 </head>
 <body>
@@ -1030,9 +1039,9 @@
 </nav>
 
 <!-- ── Progress (section-segmented) ─────────────── -->
-<div class="progress-bar" role="progressbar" aria-label="Presentation progress" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" id="progressBar">
+<div class="progress-bar" role="progressbar" aria-label="Presentation progress" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1" id="progressBar">
   <div class="progress-seg" data-section="2" style="--seg-weight:1;"><div class="progress-seg-fill" id="seg2Fill"></div></div>
-  <div class="progress-seg" data-section="3" style="--seg-weight:4;"><div class="progress-seg-fill" id="seg3Fill"></div></div>
+  <div class="progress-seg" data-section="3" style="--seg-weight:5;"><div class="progress-seg-fill" id="seg3Fill"></div></div>
 </div>
 
 <!-- ── Side rail ────────────────────────────────── -->
@@ -1042,7 +1051,7 @@
 <div class="slides-viewport" id="mainSlides">
 
   <!-- ════ SLIDE 0: Agent Configs (v16) ════ -->
-  <div class="slide active" data-slide="0" data-section="2" role="group" aria-roledescription="slide" aria-label="Slide 1 of 5: Agent Configs">
+  <div class="slide active" data-slide="0" data-section="2" role="group" aria-roledescription="slide" aria-label="Slide 1 of 6: Agent Configs">
     <div class="page-num"></div>
     <div class="page-tag"><span class="dot" style="background:var(--green);box-shadow:0 0 8px var(--green);"></span> Custom Instructions and Agent files</div>
 
@@ -1130,7 +1139,7 @@
   </div>
 
   <!-- ════ SLIDE 1: The AI Native Dev Flywheel (en9) ════ -->
-  <div class="slide" data-slide="1" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 2 of 5: The AI Native Dev Flywheel">
+  <div class="slide" data-slide="1" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 2 of 6: The AI Native Dev Flywheel">
     <div class="page-num"></div>
     <div class="page-tag"><span class="dot" style="background:var(--purple);box-shadow:0 0 8px var(--purple);"></span> Iteration Patterns and Best Practices</div>
 
@@ -1146,7 +1155,7 @@
   </div>
 
   <!-- ════ SLIDE 2: Quality Automation Workflows (v22) ════ -->
-  <div class="slide qaw-compact" data-slide="2" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 3 of 5: Quality Automation Workflows">
+  <div class="slide qaw-compact" data-slide="2" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 3 of 6: Quality Automation Workflows">
     <div class="page-num"></div>
     <div class="page-tag"><span class="dot" style="background:var(--purple);box-shadow:0 0 8px var(--purple);"></span> Iteration Patterns and Best Practices</div>
     <h1 class="headline" style="font-size:clamp(1.4rem,2.8vw,2.2rem); margin-bottom:24px;">Quality Automation Workflows</h1>
@@ -1241,7 +1250,7 @@
   </div>
 
   <!-- ════ SLIDE 3: Fabric + Foundry + GitHub (new) ════ -->
-  <div class="slide" data-slide="3" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 4 of 5: Fabric + Foundry + GitHub">
+  <div class="slide" data-slide="3" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 4 of 6: Fabric + Foundry + GitHub">
     <div class="page-num"></div>
     <div class="page-tag"><span class="dot" style="background:var(--purple);box-shadow:0 0 8px var(--purple);"></span> Better Together</div>
 
@@ -1274,7 +1283,7 @@
   </div>
 
   <!-- ════ SLIDE 4: Session Roadmap (new) ════ -->
-  <div class="slide" data-slide="4" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 5 of 5: Session Roadmap">
+  <div class="slide" data-slide="4" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 5 of 6: Session Roadmap">
     <div class="page-num"></div>
     <div class="page-tag"><span class="dot" style="background:var(--purple);box-shadow:0 0 8px var(--purple);"></span> Iteration Patterns and Best Practices</div>
 
@@ -1338,6 +1347,12 @@
       </div>
     </div>
   </div>
+
+  <!-- ════ SLIDE 5: What's Powerpoint? (closing) ════ -->
+  <div class="slide wpp-slide" data-slide="5" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 6 of 6: What's Powerpoint?">
+    <div class="page-num"></div>
+    <h1 class="wpp-title">What&rsquo;s <span>Powerpoint</span>?</h1>
+  </div>
 </div>
 
 <!-- Bottom nav -->
@@ -1352,7 +1367,7 @@
   <button class="arrow-btn" id="prev" disabled aria-label="Previous slide">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
   </button>
-  <span class="page-indicator" id="pageInd" aria-live="polite">1 / 5</span>
+  <span class="page-indicator" id="pageInd" aria-live="polite">1 / 6</span>
   <button class="arrow-btn" id="next" aria-label="Next slide">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
   </button>
@@ -1421,9 +1436,9 @@
   });
   const segFills = { 1: seg1Fill, 2: seg2Fill, 3: seg3Fill };
 
-  // Short labels for the side rail + overview grid (same 5 slides, same order)
+  // Short labels for the side rail + overview grid (same 6 slides, same order)
   const railLabels = [
-    'Agent Configs','Flywheel','Quality Flow','Fabric + Foundry + GitHub','Sessions'
+    'Agent Configs','Flywheel','Quality Flow','Fabric + Foundry + GitHub','Sessions','What\'s Powerpoint?'
   ];
 
   // Build rail dots, grouped by section with separators
