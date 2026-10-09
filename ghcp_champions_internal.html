@@ -1441,13 +1441,8 @@
     'Agent Configs','Flywheel','Quality Flow','Fabric + Foundry + GitHub','Sessions','Powerpoint what now?'
   ];
 
-  // Build rail dots, grouped by section with separators
+  // Build rail dots
   railLabels.forEach((label, i) => {
-    if (i > 0 && sectionOf(i) !== sectionOf(i - 1)) {
-      const sep = document.createElement('div');
-      sep.className = 'rail-sep';
-      rail.appendChild(sep);
-    }
     const a = document.createElement('a');
     a.dataset.idx = i;
     a.dataset.label = label;
