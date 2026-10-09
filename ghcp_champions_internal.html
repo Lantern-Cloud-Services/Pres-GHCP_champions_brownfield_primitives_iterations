@@ -1010,7 +1010,7 @@
   }
   .vp-outcome b { color: var(--teal); }
   @media (max-width: 1000px) { .vp-layout { grid-template-columns: 1fr; } }
-  .slide.wpp-slide { align-items: center; justify-content: center; }
+  .slide.wpp-slide { align-items: center; justify-content: flex-start; padding-top: 120px; }
   .wpp-title {
     margin: 0; text-align: center; font-size: clamp(4rem, 11vw, 10rem); font-weight: 900;
     letter-spacing: -3px; line-height: 1; color: var(--text-0);
@@ -1348,10 +1348,10 @@
     </div>
   </div>
 
-  <!-- ════ SLIDE 5: What's Powerpoint? (closing) ════ -->
-  <div class="slide wpp-slide" data-slide="5" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 6 of 6: What's Powerpoint?">
+  <!-- ════ SLIDE 5: Powerpoint what now? (closing) ════ -->
+  <div class="slide wpp-slide" data-slide="5" data-section="3" role="group" aria-roledescription="slide" aria-label="Slide 6 of 6: Powerpoint what now?">
     <div class="page-num"></div>
-    <h1 class="wpp-title">What&rsquo;s <span>Powerpoint</span>?</h1>
+    <h1 class="wpp-title"><span>Powerpoint</span> what now?</h1>
   </div>
 </div>
 
@@ -1438,7 +1438,7 @@
 
   // Short labels for the side rail + overview grid (same 6 slides, same order)
   const railLabels = [
-    'Agent Configs','Flywheel','Quality Flow','Fabric + Foundry + GitHub','Sessions','What\'s Powerpoint?'
+    'Agent Configs','Flywheel','Quality Flow','Fabric + Foundry + GitHub','Sessions','Powerpoint what now?'
   ];
 
   // Build rail dots, grouped by section with separators
